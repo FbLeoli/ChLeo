@@ -1,0 +1,770 @@
+TimeQuest Timing Analyzer report for micro2
+Sun Dec 01 17:17:04 2019
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'controlador:Cont|state.inicio'
+ 12. Slow Model Setup: 'clk'
+ 13. Slow Model Hold: 'clk'
+ 14. Slow Model Hold: 'controlador:Cont|state.inicio'
+ 15. Slow Model Minimum Pulse Width: 'clk'
+ 16. Slow Model Minimum Pulse Width: 'controlador:Cont|state.inicio'
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Propagation Delay
+ 20. Minimum Propagation Delay
+ 21. Fast Model Setup Summary
+ 22. Fast Model Hold Summary
+ 23. Fast Model Recovery Summary
+ 24. Fast Model Removal Summary
+ 25. Fast Model Minimum Pulse Width Summary
+ 26. Fast Model Setup: 'controlador:Cont|state.inicio'
+ 27. Fast Model Setup: 'clk'
+ 28. Fast Model Hold: 'clk'
+ 29. Fast Model Hold: 'controlador:Cont|state.inicio'
+ 30. Fast Model Minimum Pulse Width: 'clk'
+ 31. Fast Model Minimum Pulse Width: 'controlador:Cont|state.inicio'
+ 32. Clock to Output Times
+ 33. Minimum Clock to Output Times
+ 34. Propagation Delay
+ 35. Minimum Propagation Delay
+ 36. Multicorner Timing Analysis Summary
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Progagation Delay
+ 40. Minimum Progagation Delay
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name      ; micro2                                             ;
+; Device Family      ; Cyclone II                                         ;
+; Device Name        ; EP2C35F672C6                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Unavailable                                        ;
++--------------------+----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                       ;
++-------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------+
+; Clock Name                    ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                           ;
++-------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------+
+; clk                           ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                           ;
+; controlador:Cont|state.inicio ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { controlador:Cont|state.inicio } ;
++-------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                   ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 622.28 MHz ; 420.17 MHz      ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------------------------------+
+; Slow Model Setup Summary                               ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; controlador:Cont|state.inicio ; -3.220 ; -3.220        ;
+; clk                           ; -0.607 ; -1.687        ;
++-------------------------------+--------+---------------+
+
+
++--------------------------------------------------------+
+; Slow Model Hold Summary                                ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; clk                           ; -2.126 ; -10.580       ;
+; controlador:Cont|state.inicio ; 3.278  ; 0.000         ;
++-------------------------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++--------------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary                 ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; clk                           ; -1.380 ; -8.380        ;
+; controlador:Cont|state.inicio ; 0.500  ; 0.000         ;
++-------------------------------+--------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'controlador:Cont|state.inicio'                                                                                                       ;
++--------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                 ; Launch Clock ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+; -3.220 ; controlador:Cont|state.busca ; controlador:Cont|PC_ldC ; clk          ; controlador:Cont|state.inicio ; 0.500        ; -2.074     ; 0.704      ;
++--------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                                                 ;
++--------+------------------------------------+------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                            ; Launch Clock                  ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; -0.607 ; datapath:DP|PC:PC1|address_prog[0] ; datapath:DP|PC:PC1|address_prog[3] ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.643      ;
+; -0.536 ; datapath:DP|PC:PC1|address_prog[0] ; datapath:DP|PC:PC1|address_prog[2] ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.572      ;
+; -0.485 ; datapath:DP|PC:PC1|address_prog[1] ; datapath:DP|PC:PC1|address_prog[3] ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.521      ;
+; -0.466 ; datapath:DP|PC:PC1|address_prog[2] ; datapath:DP|PC:PC1|address_prog[3] ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.502      ;
+; -0.465 ; datapath:DP|PC:PC1|address_prog[0] ; datapath:DP|PC:PC1|address_prog[1] ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.501      ;
+; -0.414 ; datapath:DP|PC:PC1|address_prog[1] ; datapath:DP|PC:PC1|address_prog[2] ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.450      ;
+; -0.080 ; datapath:DP|PC:PC1|address_prog[2] ; datapath:DP|PC:PC1|address_prog[2] ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.116      ;
+; -0.079 ; datapath:DP|PC:PC1|address_prog[0] ; datapath:DP|PC:PC1|address_prog[0] ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.115      ;
+; -0.031 ; datapath:DP|PC:PC1|address_prog[1] ; datapath:DP|PC:PC1|address_prog[1] ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.067      ;
+; 0.244  ; datapath:DP|PC:PC1|address_prog[3] ; datapath:DP|PC:PC1|address_prog[3] ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.792      ;
+; 0.247  ; controlador:Cont|state.busca       ; controlador:Cont|state.decod       ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.789      ;
+; 0.248  ; controlador:Cont|state.decod       ; controlador:Cont|state.busca       ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.788      ;
+; 0.379  ; controlador:Cont|state.busca       ; controlador:Cont|state.busca       ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.657      ;
+; 1.543  ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[0] ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 2.684      ; 1.927      ;
+; 1.543  ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[1] ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 2.684      ; 1.927      ;
+; 1.543  ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[2] ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 2.684      ; 1.927      ;
+; 1.543  ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[3] ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 2.684      ; 1.927      ;
+; 1.722  ; controlador:Cont|PC_ldC            ; datapath:DP|PC:PC1|address_prog[0] ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 2.074      ; 1.388      ;
+; 1.722  ; controlador:Cont|PC_ldC            ; datapath:DP|PC:PC1|address_prog[1] ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 2.074      ; 1.388      ;
+; 1.722  ; controlador:Cont|PC_ldC            ; datapath:DP|PC:PC1|address_prog[2] ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 2.074      ; 1.388      ;
+; 1.722  ; controlador:Cont|PC_ldC            ; datapath:DP|PC:PC1|address_prog[3] ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 2.074      ; 1.388      ;
+; 2.043  ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[0] ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 2.684      ; 1.927      ;
+; 2.043  ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[1] ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 2.684      ; 1.927      ;
+; 2.043  ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[2] ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 2.684      ; 1.927      ;
+; 2.043  ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[3] ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 2.684      ; 1.927      ;
+; 2.346  ; controlador:Cont|state.inicio      ; controlador:Cont|state.busca       ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 2.684      ; 1.124      ;
+; 2.846  ; controlador:Cont|state.inicio      ; controlador:Cont|state.busca       ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 2.684      ; 1.124      ;
++--------+------------------------------------+------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                                  ;
++--------+------------------------------------+------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                            ; Launch Clock                  ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; -2.126 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[0] ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 2.684      ; 1.074      ;
+; -2.126 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[1] ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 2.684      ; 1.074      ;
+; -2.126 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[2] ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 2.684      ; 1.074      ;
+; -2.126 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[3] ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 2.684      ; 1.074      ;
+; -2.076 ; controlador:Cont|state.inicio      ; controlador:Cont|state.busca       ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 2.684      ; 1.124      ;
+; -1.626 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[0] ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 2.684      ; 1.074      ;
+; -1.626 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[1] ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 2.684      ; 1.074      ;
+; -1.626 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[2] ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 2.684      ; 1.074      ;
+; -1.626 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[3] ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 2.684      ; 1.074      ;
+; -1.576 ; controlador:Cont|state.inicio      ; controlador:Cont|state.busca       ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 2.684      ; 1.124      ;
+; -0.952 ; controlador:Cont|PC_ldC            ; datapath:DP|PC:PC1|address_prog[0] ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 2.074      ; 1.388      ;
+; -0.952 ; controlador:Cont|PC_ldC            ; datapath:DP|PC:PC1|address_prog[1] ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 2.074      ; 1.388      ;
+; -0.952 ; controlador:Cont|PC_ldC            ; datapath:DP|PC:PC1|address_prog[2] ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 2.074      ; 1.388      ;
+; -0.952 ; controlador:Cont|PC_ldC            ; datapath:DP|PC:PC1|address_prog[3] ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 2.074      ; 1.388      ;
+; 0.391  ; controlador:Cont|state.busca       ; controlador:Cont|state.busca       ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.522  ; controlador:Cont|state.decod       ; controlador:Cont|state.busca       ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.788      ;
+; 0.523  ; controlador:Cont|state.busca       ; controlador:Cont|state.decod       ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.789      ;
+; 0.526  ; datapath:DP|PC:PC1|address_prog[3] ; datapath:DP|PC:PC1|address_prog[3] ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.792      ;
+; 0.801  ; datapath:DP|PC:PC1|address_prog[1] ; datapath:DP|PC:PC1|address_prog[1] ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.067      ;
+; 0.849  ; datapath:DP|PC:PC1|address_prog[0] ; datapath:DP|PC:PC1|address_prog[0] ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.115      ;
+; 0.850  ; datapath:DP|PC:PC1|address_prog[2] ; datapath:DP|PC:PC1|address_prog[2] ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.116      ;
+; 1.184  ; datapath:DP|PC:PC1|address_prog[1] ; datapath:DP|PC:PC1|address_prog[2] ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.450      ;
+; 1.235  ; datapath:DP|PC:PC1|address_prog[0] ; datapath:DP|PC:PC1|address_prog[1] ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.501      ;
+; 1.236  ; datapath:DP|PC:PC1|address_prog[2] ; datapath:DP|PC:PC1|address_prog[3] ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.502      ;
+; 1.255  ; datapath:DP|PC:PC1|address_prog[1] ; datapath:DP|PC:PC1|address_prog[3] ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.521      ;
+; 1.306  ; datapath:DP|PC:PC1|address_prog[0] ; datapath:DP|PC:PC1|address_prog[2] ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.572      ;
+; 1.377  ; datapath:DP|PC:PC1|address_prog[0] ; datapath:DP|PC:PC1|address_prog[3] ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.643      ;
++--------+------------------------------------+------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'controlador:Cont|state.inicio'                                                                                                       ;
++-------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                 ; Launch Clock ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+; 3.278 ; controlador:Cont|state.busca ; controlador:Cont|PC_ldC ; clk          ; controlador:Cont|state.inicio ; -0.500       ; -2.074     ; 0.704      ;
++-------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                               ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                             ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controlador:Cont|state.busca       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controlador:Cont|state.busca       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controlador:Cont|state.decod       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controlador:Cont|state.decod       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controlador:Cont|state.inicio      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controlador:Cont|state.inicio      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[3] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; Cont|state.busca|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; Cont|state.busca|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; Cont|state.decod|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; Cont|state.decod|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; Cont|state.inicio|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; Cont|state.inicio|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[3]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[3]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                 ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'controlador:Cont|state.inicio'                                                                  ;
++-------+--------------+----------------+------------------+-------------------------------+------------+--------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                         ; Clock Edge ; Target                   ;
++-------+--------------+----------------+------------------+-------------------------------+------------+--------------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controlador:Cont|state.inicio ; Rise       ; Cont|PC_ldC|datac        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controlador:Cont|state.inicio ; Rise       ; Cont|PC_ldC|datac        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controlador:Cont|state.inicio ; Rise       ; Cont|state.inicio|regout ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controlador:Cont|state.inicio ; Rise       ; Cont|state.inicio|regout ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controlador:Cont|state.inicio ; Fall       ; controlador:Cont|PC_ldC  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controlador:Cont|state.inicio ; Fall       ; controlador:Cont|PC_ldC  ;
++-------+--------------+----------------+------------------+-------------------------------+------------+--------------------------+
+
+
++---------------------------------------------------------------------------+
+; Clock to Output Times                                                     ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; saiClock      ; clk        ; 4.304 ; 4.304 ; Rise       ; clk             ;
+; SaidaAux1[*]  ; clk        ; 6.274 ; 6.274 ; Fall       ; clk             ;
+;  SaidaAux1[0] ; clk        ; 6.274 ; 6.274 ; Fall       ; clk             ;
+;  SaidaAux1[1] ; clk        ; 6.132 ; 6.132 ; Fall       ; clk             ;
+;  SaidaAux1[2] ; clk        ; 6.108 ; 6.108 ; Fall       ; clk             ;
+;  SaidaAux1[3] ; clk        ; 6.128 ; 6.128 ; Fall       ; clk             ;
+; saiClock      ; clk        ; 4.304 ; 4.304 ; Fall       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                             ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; saiClock      ; clk        ; 4.304 ; 4.304 ; Rise       ; clk             ;
+; SaidaAux1[*]  ; clk        ; 6.108 ; 6.108 ; Fall       ; clk             ;
+;  SaidaAux1[0] ; clk        ; 6.274 ; 6.274 ; Fall       ; clk             ;
+;  SaidaAux1[1] ; clk        ; 6.132 ; 6.132 ; Fall       ; clk             ;
+;  SaidaAux1[2] ; clk        ; 6.108 ; 6.108 ; Fall       ; clk             ;
+;  SaidaAux1[3] ; clk        ; 6.128 ; 6.128 ; Fall       ; clk             ;
+; saiClock      ; clk        ; 4.304 ; 4.304 ; Fall       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; reset      ; ResetOut    ; 4.289 ;    ;    ; 4.289 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; reset      ; ResetOut    ; 4.289 ;    ;    ; 4.289 ;
++------------+-------------+-------+----+----+-------+
+
+
++--------------------------------------------------------+
+; Fast Model Setup Summary                               ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; controlador:Cont|state.inicio ; -1.623 ; -1.623        ;
+; clk                           ; 0.292  ; 0.000         ;
++-------------------------------+--------+---------------+
+
+
++--------------------------------------------------------+
+; Fast Model Hold Summary                                ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; clk                           ; -1.413 ; -6.857        ;
+; controlador:Cont|state.inicio ; 2.233  ; 0.000         ;
++-------------------------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++--------------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary                 ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; clk                           ; -1.380 ; -8.380        ;
+; controlador:Cont|state.inicio ; 0.500  ; 0.000         ;
++-------------------------------+--------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'controlador:Cont|state.inicio'                                                                                                       ;
++--------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                 ; Launch Clock ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+; -1.623 ; controlador:Cont|state.busca ; controlador:Cont|PC_ldC ; clk          ; controlador:Cont|state.inicio ; 0.500        ; -1.383     ; 0.350      ;
++--------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                                                ;
++-------+------------------------------------+------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock                  ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; 0.292 ; datapath:DP|PC:PC1|address_prog[0] ; datapath:DP|PC:PC1|address_prog[3] ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.740      ;
+; 0.327 ; datapath:DP|PC:PC1|address_prog[0] ; datapath:DP|PC:PC1|address_prog[2] ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.705      ;
+; 0.349 ; datapath:DP|PC:PC1|address_prog[1] ; datapath:DP|PC:PC1|address_prog[3] ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.683      ;
+; 0.362 ; datapath:DP|PC:PC1|address_prog[0] ; datapath:DP|PC:PC1|address_prog[1] ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.670      ;
+; 0.362 ; datapath:DP|PC:PC1|address_prog[2] ; datapath:DP|PC:PC1|address_prog[3] ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.670      ;
+; 0.384 ; datapath:DP|PC:PC1|address_prog[1] ; datapath:DP|PC:PC1|address_prog[2] ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.648      ;
+; 0.502 ; datapath:DP|PC:PC1|address_prog[0] ; datapath:DP|PC:PC1|address_prog[0] ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.530      ;
+; 0.502 ; datapath:DP|PC:PC1|address_prog[2] ; datapath:DP|PC:PC1|address_prog[2] ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.530      ;
+; 0.522 ; datapath:DP|PC:PC1|address_prog[1] ; datapath:DP|PC:PC1|address_prog[1] ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.510      ;
+; 0.638 ; controlador:Cont|state.busca       ; controlador:Cont|state.decod       ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.394      ;
+; 0.639 ; controlador:Cont|state.decod       ; controlador:Cont|state.busca       ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.393      ;
+; 0.639 ; datapath:DP|PC:PC1|address_prog[3] ; datapath:DP|PC:PC1|address_prog[3] ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.393      ;
+; 0.665 ; controlador:Cont|state.busca       ; controlador:Cont|state.busca       ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.367      ;
+; 1.362 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[0] ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 1.660      ; 0.971      ;
+; 1.362 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[1] ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 1.660      ; 0.971      ;
+; 1.362 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[2] ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 1.660      ; 0.971      ;
+; 1.362 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[3] ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 1.660      ; 0.971      ;
+; 1.726 ; controlador:Cont|PC_ldC            ; datapath:DP|PC:PC1|address_prog[0] ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.383      ; 0.689      ;
+; 1.726 ; controlador:Cont|PC_ldC            ; datapath:DP|PC:PC1|address_prog[1] ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.383      ; 0.689      ;
+; 1.726 ; controlador:Cont|PC_ldC            ; datapath:DP|PC:PC1|address_prog[2] ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.383      ; 0.689      ;
+; 1.726 ; controlador:Cont|PC_ldC            ; datapath:DP|PC:PC1|address_prog[3] ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.383      ; 0.689      ;
+; 1.793 ; controlador:Cont|state.inicio      ; controlador:Cont|state.busca       ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 1.660      ; 0.540      ;
+; 1.862 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[0] ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.660      ; 0.971      ;
+; 1.862 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[1] ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.660      ; 0.971      ;
+; 1.862 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[2] ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.660      ; 0.971      ;
+; 1.862 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[3] ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.660      ; 0.971      ;
+; 2.293 ; controlador:Cont|state.inicio      ; controlador:Cont|state.busca       ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.660      ; 0.540      ;
++-------+------------------------------------+------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                                  ;
++--------+------------------------------------+------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                            ; Launch Clock                  ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; -1.413 ; controlador:Cont|state.inicio      ; controlador:Cont|state.busca       ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.660      ; 0.540      ;
+; -1.361 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[0] ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.660      ; 0.592      ;
+; -1.361 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[1] ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.660      ; 0.592      ;
+; -1.361 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[2] ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.660      ; 0.592      ;
+; -1.361 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[3] ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.660      ; 0.592      ;
+; -0.913 ; controlador:Cont|state.inicio      ; controlador:Cont|state.busca       ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 1.660      ; 0.540      ;
+; -0.861 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[0] ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 1.660      ; 0.592      ;
+; -0.861 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[1] ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 1.660      ; 0.592      ;
+; -0.861 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[2] ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 1.660      ; 0.592      ;
+; -0.861 ; controlador:Cont|state.inicio      ; datapath:DP|PC:PC1|address_prog[3] ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 1.660      ; 0.592      ;
+; -0.846 ; controlador:Cont|PC_ldC            ; datapath:DP|PC:PC1|address_prog[0] ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.383      ; 0.689      ;
+; -0.846 ; controlador:Cont|PC_ldC            ; datapath:DP|PC:PC1|address_prog[1] ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.383      ; 0.689      ;
+; -0.846 ; controlador:Cont|PC_ldC            ; datapath:DP|PC:PC1|address_prog[2] ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.383      ; 0.689      ;
+; -0.846 ; controlador:Cont|PC_ldC            ; datapath:DP|PC:PC1|address_prog[3] ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.383      ; 0.689      ;
+; 0.215  ; controlador:Cont|state.busca       ; controlador:Cont|state.busca       ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.241  ; controlador:Cont|state.decod       ; controlador:Cont|state.busca       ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.393      ;
+; 0.241  ; datapath:DP|PC:PC1|address_prog[3] ; datapath:DP|PC:PC1|address_prog[3] ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.393      ;
+; 0.242  ; controlador:Cont|state.busca       ; controlador:Cont|state.decod       ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.394      ;
+; 0.358  ; datapath:DP|PC:PC1|address_prog[1] ; datapath:DP|PC:PC1|address_prog[1] ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.378  ; datapath:DP|PC:PC1|address_prog[0] ; datapath:DP|PC:PC1|address_prog[0] ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378  ; datapath:DP|PC:PC1|address_prog[2] ; datapath:DP|PC:PC1|address_prog[2] ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.530      ;
+; 0.496  ; datapath:DP|PC:PC1|address_prog[1] ; datapath:DP|PC:PC1|address_prog[2] ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.648      ;
+; 0.518  ; datapath:DP|PC:PC1|address_prog[2] ; datapath:DP|PC:PC1|address_prog[3] ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.670      ;
+; 0.518  ; datapath:DP|PC:PC1|address_prog[0] ; datapath:DP|PC:PC1|address_prog[1] ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.670      ;
+; 0.531  ; datapath:DP|PC:PC1|address_prog[1] ; datapath:DP|PC:PC1|address_prog[3] ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.683      ;
+; 0.553  ; datapath:DP|PC:PC1|address_prog[0] ; datapath:DP|PC:PC1|address_prog[2] ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.705      ;
+; 0.588  ; datapath:DP|PC:PC1|address_prog[0] ; datapath:DP|PC:PC1|address_prog[3] ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.740      ;
++--------+------------------------------------+------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'controlador:Cont|state.inicio'                                                                                                       ;
++-------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                 ; Launch Clock ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+; 2.233 ; controlador:Cont|state.busca ; controlador:Cont|PC_ldC ; clk          ; controlador:Cont|state.inicio ; -0.500       ; -1.383     ; 0.350      ;
++-------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                               ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                             ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controlador:Cont|state.busca       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controlador:Cont|state.busca       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controlador:Cont|state.decod       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controlador:Cont|state.decod       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controlador:Cont|state.inicio      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controlador:Cont|state.inicio      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[3] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; Cont|state.busca|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; Cont|state.busca|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; Cont|state.decod|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; Cont|state.decod|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; Cont|state.inicio|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; Cont|state.inicio|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[3]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[3]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                 ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'controlador:Cont|state.inicio'                                                                  ;
++-------+--------------+----------------+------------------+-------------------------------+------------+--------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                         ; Clock Edge ; Target                   ;
++-------+--------------+----------------+------------------+-------------------------------+------------+--------------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controlador:Cont|state.inicio ; Rise       ; Cont|PC_ldC|datac        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controlador:Cont|state.inicio ; Rise       ; Cont|PC_ldC|datac        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controlador:Cont|state.inicio ; Rise       ; Cont|state.inicio|regout ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controlador:Cont|state.inicio ; Rise       ; Cont|state.inicio|regout ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controlador:Cont|state.inicio ; Fall       ; controlador:Cont|PC_ldC  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controlador:Cont|state.inicio ; Fall       ; controlador:Cont|PC_ldC  ;
++-------+--------------+----------------+------------------+-------------------------------+------------+--------------------------+
+
+
++---------------------------------------------------------------------------+
+; Clock to Output Times                                                     ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; saiClock      ; clk        ; 2.300 ; 2.300 ; Rise       ; clk             ;
+; SaidaAux1[*]  ; clk        ; 3.565 ; 3.565 ; Fall       ; clk             ;
+;  SaidaAux1[0] ; clk        ; 3.565 ; 3.565 ; Fall       ; clk             ;
+;  SaidaAux1[1] ; clk        ; 3.512 ; 3.512 ; Fall       ; clk             ;
+;  SaidaAux1[2] ; clk        ; 3.491 ; 3.491 ; Fall       ; clk             ;
+;  SaidaAux1[3] ; clk        ; 3.511 ; 3.511 ; Fall       ; clk             ;
+; saiClock      ; clk        ; 2.300 ; 2.300 ; Fall       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                             ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; saiClock      ; clk        ; 2.300 ; 2.300 ; Rise       ; clk             ;
+; SaidaAux1[*]  ; clk        ; 3.491 ; 3.491 ; Fall       ; clk             ;
+;  SaidaAux1[0] ; clk        ; 3.565 ; 3.565 ; Fall       ; clk             ;
+;  SaidaAux1[1] ; clk        ; 3.512 ; 3.512 ; Fall       ; clk             ;
+;  SaidaAux1[2] ; clk        ; 3.491 ; 3.491 ; Fall       ; clk             ;
+;  SaidaAux1[3] ; clk        ; 3.511 ; 3.511 ; Fall       ; clk             ;
+; saiClock      ; clk        ; 2.300 ; 2.300 ; Fall       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; reset      ; ResetOut    ; 2.294 ;    ;    ; 2.294 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; reset      ; ResetOut    ; 2.294 ;    ;    ; 2.294 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                          ;
++--------------------------------+--------+---------+----------+---------+---------------------+
+; Clock                          ; Setup  ; Hold    ; Recovery ; Removal ; Minimum Pulse Width ;
++--------------------------------+--------+---------+----------+---------+---------------------+
+; Worst-case Slack               ; -3.220 ; -2.126  ; N/A      ; N/A     ; -1.380              ;
+;  clk                           ; -0.607 ; -2.126  ; N/A      ; N/A     ; -1.380              ;
+;  controlador:Cont|state.inicio ; -3.220 ; 2.233   ; N/A      ; N/A     ; 0.500               ;
+; Design-wide TNS                ; -4.907 ; -10.58  ; 0.0      ; 0.0     ; -8.38               ;
+;  clk                           ; -1.687 ; -10.580 ; N/A      ; N/A     ; -8.380              ;
+;  controlador:Cont|state.inicio ; -3.220 ; 0.000   ; N/A      ; N/A     ; 0.000               ;
++--------------------------------+--------+---------+----------+---------+---------------------+
+
+
++---------------------------------------------------------------------------+
+; Clock to Output Times                                                     ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; saiClock      ; clk        ; 4.304 ; 4.304 ; Rise       ; clk             ;
+; SaidaAux1[*]  ; clk        ; 6.274 ; 6.274 ; Fall       ; clk             ;
+;  SaidaAux1[0] ; clk        ; 6.274 ; 6.274 ; Fall       ; clk             ;
+;  SaidaAux1[1] ; clk        ; 6.132 ; 6.132 ; Fall       ; clk             ;
+;  SaidaAux1[2] ; clk        ; 6.108 ; 6.108 ; Fall       ; clk             ;
+;  SaidaAux1[3] ; clk        ; 6.128 ; 6.128 ; Fall       ; clk             ;
+; saiClock      ; clk        ; 4.304 ; 4.304 ; Fall       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                             ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; saiClock      ; clk        ; 2.300 ; 2.300 ; Rise       ; clk             ;
+; SaidaAux1[*]  ; clk        ; 3.491 ; 3.491 ; Fall       ; clk             ;
+;  SaidaAux1[0] ; clk        ; 3.565 ; 3.565 ; Fall       ; clk             ;
+;  SaidaAux1[1] ; clk        ; 3.512 ; 3.512 ; Fall       ; clk             ;
+;  SaidaAux1[2] ; clk        ; 3.491 ; 3.491 ; Fall       ; clk             ;
+;  SaidaAux1[3] ; clk        ; 3.511 ; 3.511 ; Fall       ; clk             ;
+; saiClock      ; clk        ; 2.300 ; 2.300 ; Fall       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Progagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; reset      ; ResetOut    ; 4.289 ;    ;    ; 4.289 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------+
+; Minimum Progagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; reset      ; ResetOut    ; 2.294 ;    ;    ; 2.294 ;
++------------+-------------+-------+----+----+-------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                           ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; From Clock                    ; To Clock                      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; clk                           ; clk                           ; 3        ; 0        ; 0        ; 10       ;
+; controlador:Cont|state.inicio ; clk                           ; 1        ; 1        ; 8        ; 12       ;
+; clk                           ; controlador:Cont|state.inicio ; 0        ; 0        ; 1        ; 0        ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                            ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; From Clock                    ; To Clock                      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; clk                           ; clk                           ; 3        ; 0        ; 0        ; 10       ;
+; controlador:Cont|state.inicio ; clk                           ; 1        ; 1        ; 8        ; 12       ;
+; clk                           ; controlador:Cont|state.inicio ; 0        ; 0        ; 1        ; 0        ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 5     ; 5    ;
+; Unconstrained Output Ports      ; 6     ; 6    ;
+; Unconstrained Output Port Paths ; 6     ; 6    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Sun Dec 01 17:17:02 2019
+Info: Command: quartus_sta micro2 -c micro2
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 1 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'micro2.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name controlador:Cont|state.inicio controlador:Cont|state.inicio
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.220
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.220        -3.220 controlador:Cont|state.inicio 
+    Info (332119):    -0.607        -1.687 clk 
+Info (332146): Worst-case hold slack is -2.126
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.126       -10.580 clk 
+    Info (332119):     3.278         0.000 controlador:Cont|state.inicio 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -8.380 clk 
+    Info (332119):     0.500         0.000 controlador:Cont|state.inicio 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.623
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.623        -1.623 controlador:Cont|state.inicio 
+    Info (332119):     0.292         0.000 clk 
+Info (332146): Worst-case hold slack is -1.413
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.413        -6.857 clk 
+    Info (332119):     2.233         0.000 controlador:Cont|state.inicio 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -8.380 clk 
+    Info (332119):     0.500         0.000 controlador:Cont|state.inicio 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4543 megabytes
+    Info: Processing ended: Sun Dec 01 17:17:04 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,21 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.alu_components.all;
+
+entity datapath is
+	port 
+	(
+
+
+
+	);
+
+end datapath;
+
+architecture arqDP of datapath is
+
+begin
+
+
+end arqDP;

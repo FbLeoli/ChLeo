@@ -1,0 +1,51 @@
+entity registrador is
+	port
+	(
+		-- Input ports
+		load	: in  std_logic;
+		clear	: in  std_logic;
+		data  : in  std_logic_vector(7 downto 0);
+		clock :
+
+		-- Output ports
+		reg_var	: out  std_logic_vector(7 downto 0);
+
+	);
+end registrador;
+
+architecture arq_reg8 of registrador is
+
+
+begin
+
+	-- In Altera devices, register signals have a set priority.
+-- The HDL design should reflect this priority.
+process(clear, load, data, clock)
+begin
+	-- The asynchronous reset signal has the highest priority
+	if (<reset> = '0') then
+		<register_variable> <= '0';
+	-- Asynchronous load has next-highest priority
+	elsif (<aload> = '1') then
+		<register_variable> <= <adata>;
+	else 
+		-- At a clock edge, if asynchronous signals have not taken priority,
+		-- respond to the appropriate synchronous signal.
+		-- Check for synchronous reset, then synchronous load.
+		-- If none of these takes precedence, update the register output
+		-- to be the register input.
+		if (rising_edge(<clock_signal>)) then
+			if (<clock_enable> = '1') then
+				if (<synch_reset> = '0') then
+					<register_variable> <= '0';
+				elsif (<synch_load> = '1') then
+					<register_variable> <= <synch_data>;
+				else
+					<register_variable> <= <data>;
+				end if;
+			end if;
+		end if;
+	end if;
+end process;
+end <arch_name>;
+	

@@ -1,0 +1,131 @@
+-- Quartus II VHDL Template
+-- Four-State Mealy State Machine
+
+-- A Mealy machine has outputs that depend on both the state and
+-- the inputs.	When the inputs change, the outputs are updated
+-- immediately, without waiting for a clock edge.  The outputs
+-- can be written more than once per state or per clock cycle.
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity MdE is
+
+	port
+	(
+		clk		 : in	std_logic;
+		input	 : in	std_logic;
+		reset	 : in	std_logic;
+		output	 : out	std_logic_vector(1 downto 0)
+		
+	);
+
+end entity;
+
+architecture rtl of MdE is
+
+	-- Build an enumerated type for the state machine
+	type state_type is (inicio, busca, decod, ADD, SUB, ANDD, ORR, XORR, CMP, CMPU, SLLL, SLRR, SLAA, INN, OUTT, MOV, ADDI, ANDI, ORI, XORI, LOAD, STORE, JMP, RET, BEQ, BLT, BHT);
+
+	-- Register to hold the current state
+	signal state : state_type;
+	signal instruction :  bit_vector(15 downto 0);
+	alias opcodeAux : bit_vector(1 downto 0)is instruction(15 downto 14); 
+	alias opcode1   : bit_vector(3 downto 0)is instruction(13 downto 10); 
+	alias opcode2   : bit_vector(1 downto 0)is instruction(13 downto 12); 
+
+begin
+
+	process (clk, reset)
+	begin
+
+		if reset = '1' then
+			state <= inicio;
+
+		elsif (rising_edge(clk)) then
+
+			-- Determine the next state synchronously, based on
+			-- the current state and the input
+			case state is
+				when inicio =>
+						state <= busca;
+					
+				when busca =>
+						state <= decod;
+					
+				when decod =>
+					case opcodeAux is
+						when 00 =>
+							with opcode1 select
+								state <= ADD   when "0000"
+											SUB   when "0001"
+											ANDD  when "0010"
+											ORR   when "0011"
+											XORR  when "0100"
+											CMP   when "0101"
+											CMPU  when "0110"
+											SLLL  when "0111"
+											SLRR  when "1000"
+											SLAA  when "1001"
+											INN   when "1010"
+											OUTT  when "1011"
+											MOV   when "1100"
+											inicio when others;
+						when 01 =>
+							with opcode2 select
+								state <= ADDI  when "00"
+											ANDI  when "01"
+											ORI   when "10"
+											XORI  when "11"
+						when 10 =>
+							with opcode2 select
+								state <= LOAD  when "00"
+											STORE when "01"
+											JMP   when "10"
+											RET   when "11"
+						when 11 =>
+							with opcode2 select
+								state <= BEQ   when "00"
+											BLT   when "01"
+											BHT   when "10"
+											inicio when others;
+								
+							
+			end case;
+
+		end if;
+	end process;
+
+	-- Determine the output based only on the current state
+	-- and the input (do not wait for a clock edge).
+	process (state, input)
+	begin
+			case state is
+				when s0=>
+					if input = '1' then
+						output <= "00";
+					else
+						output <= "01";
+					end if;
+				when s1=>
+					if input = '1' then
+						output <= "01";
+					else
+						output <= "11";
+					end if;
+				when s2=>
+					if input = '1' then
+						output <= "10";
+					else
+						output <= "10";
+					end if;
+				when s3=>
+					if input = '1' then
+						output <= "11";
+					else
+						output <= "10";
+					end if;
+			end case;
+	end process;
+
+end rtl;

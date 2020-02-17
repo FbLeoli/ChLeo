@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="datapath">
+		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|memdados:MemData|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_r4a1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|memprog:MemPro|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_kj81.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

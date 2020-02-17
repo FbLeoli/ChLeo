@@ -1,0 +1,44 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity PC is
+	port
+	(
+		load	: in std_logic;
+		clear	: in std_logic;
+		os    : in std_logic_vector(10 downto 0);
+		clock : in std_logic;
+		f     : in std_logic;
+
+		-- Output ports
+		address_prog: out  std_logic_vector(10 downto 0)
+
+	);
+end PC;
+
+architecture arq_PC of PC is
+
+
+begin
+
+	-- In Altera devices, register signals have a set priority.
+-- The HDL design should reflect this priority.
+process(clear, load, data, clock)
+begin
+
+		if (rising_edge(clock)) then
+				if (clear = '0') then
+					address_prog <= "00000000";
+				elsif (load = '1') then
+						if (f = '0') then
+								std_logic_vector(address_prog) <= signed(address_prog) + signed("00000000001");
+						else
+								std_logic_vector(address_prog) <= signed(address_prog) + signed(os);
+						end if;
+				
+				end if;
+		end if;
+end process;
+end arq_PC;
+	

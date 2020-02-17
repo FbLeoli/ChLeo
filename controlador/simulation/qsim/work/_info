@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Fábio\Documents\microProjeto\microProjeto\controlador\simulation\qsim
+vcontrolador
+Z1 I@hS?a:clghNHN^4`<>2O30
+Z2 VWkm4=KQA[fRcUXCBzVc^Z3
+Z3 dC:\altera\13.0\microProjeto-20191113T132353Z-001\microProjeto\controlador\simulation\qsim
+Z4 w1573662693
+Z5 8controlador.vo
+Z6 Fcontrolador.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|controlador.vo|
+Z9 o-work work -O0
+!i10b 1
+Z10 !s100 EkM78l[FN6k4VfEWR@Z1e0
+!s85 0
+Z11 !s108 1573662702.858000
+Z12 !s107 controlador.vo|
+!s101 -O0
+vcontrolador_vlg_check_tst
+!i10b 1
+!s100 5L25zXgF>:ZKVTG:AWLBm3
+I@NZnz]QU:=HE967DQ9fK[0
+VQVAN;HQzoS^VZzZo6`aIN1
+R3
+Z13 w1573662691
+Z14 8controlador.vt
+Z15 Fcontrolador.vt
+L0 63
+R7
+r1
+!s85 0
+31
+Z16 !s108 1573662703.797000
+Z17 !s107 controlador.vt|
+Z18 !s90 -work|work|controlador.vt|
+!s101 -O0
+R9
+vcontrolador_vlg_sample_tst
+!i10b 1
+Z19 !s100 8@Ca1Q759IkBd9=Z2C_521
+Z20 I=eQIdGC95BbEUKMfaG4^g0
+Z21 VMk>6<n2[W4l97kTGk[L^?2
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R9
+vcontrolador_vlg_vec_tst
+!i10b 1
+!s100 V;;=Hmh?C[PJhPeWEUUC<1
+I=zBkadP>Km6eL2K5[PHXa2
+Z22 VV]^Uo1L`J8e@nG1Lj`G?G1
+R3
+R13
+R14
+R15
+L0 741
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R9

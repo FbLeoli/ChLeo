@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'controlador:Cont|state.inicio'
+Slack : -3.220
+TNS   : -3.220
+
+Type  : Slow Model Setup 'clk'
+Slack : -0.607
+TNS   : -1.687
+
+Type  : Slow Model Hold 'clk'
+Slack : -2.126
+TNS   : -10.580
+
+Type  : Slow Model Hold 'controlador:Cont|state.inicio'
+Slack : 3.278
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -8.380
+
+Type  : Slow Model Minimum Pulse Width 'controlador:Cont|state.inicio'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'controlador:Cont|state.inicio'
+Slack : -1.623
+TNS   : -1.623
+
+Type  : Fast Model Setup 'clk'
+Slack : 0.292
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clk'
+Slack : -1.413
+TNS   : -6.857
+
+Type  : Fast Model Hold 'controlador:Cont|state.inicio'
+Slack : 2.233
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -8.380
+
+Type  : Fast Model Minimum Pulse Width 'controlador:Cont|state.inicio'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

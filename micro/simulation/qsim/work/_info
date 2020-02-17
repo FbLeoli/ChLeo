@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0\microProjeto-20191113T132353Z-001\microProjeto\micro\simulation\qsim
+vmicro
+Z1 Ii]R7<@__iM;?^h4KH3LBQ2
+Z2 VfDz7E4H_SWREhMd2_TZPQ1
+Z3 dC:\altera\13.0\microProjeto\micro2.0\microProjeto3\microProjeto\micro\simulation\qsim
+Z4 w1575470154
+Z5 8micro.vo
+Z6 Fmicro.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|micro.vo|
+Z9 o-work work -O0
+!i10b 1
+Z10 !s100 Q^Ehk;>0]e5;hIV<0ZCjX3
+!s85 0
+Z11 !s108 1575470155.300000
+Z12 !s107 micro.vo|
+!s101 -O0
+vmicro_vlg_check_tst
+!i10b 1
+!s100 zFEfBXVLEmNI0Y2z9i4@d1
+I3Xi2L:nME>ZJ@3boAkfN62
+VklIQXngFBzJ3d@kcI5<6>0
+R3
+Z13 w1575470152
+Z14 8micro.vt
+Z15 Fmicro.vt
+L0 63
+R7
+r1
+!s85 0
+31
+Z16 !s108 1575470155.750000
+Z17 !s107 micro.vt|
+Z18 !s90 -work|work|micro.vt|
+!s101 -O0
+R9
+vmicro_vlg_sample_tst
+!i10b 1
+Z19 !s100 Da1DWFJ@aIb]bN2J@3Dh03
+Z20 I;@`GnNjRUkclE>oBMdkz:2
+Z21 Vb@nh5ddz>gDmc]LRmCoMI0
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R9
+vmicro_vlg_vec_tst
+!i10b 1
+!s100 7G1e<lPRk??@I]G2YJF7h2
+IlTLmb<RaJNzk6_>0R@of?0
+Z22 VhiIMa2nj2`a1[8Wj_V`RZ1
+R3
+R13
+R14
+R15
+L0 1642
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R9

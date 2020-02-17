@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Fábio\Documents\microProjeto\microProjeto\datapath\simulation\qsim
+vdatapath
+Z1 I934>EzbT;S[;5FbDh7?>T3
+Z2 V3fRCUaEI93_V8VVFBXAX=0
+Z3 dC:\Users\Fábio\Documents\microProjeto\microProjeto\datapath\simulation\qsim
+Z4 w1573445008
+Z5 8datapath.vo
+Z6 Fdatapath.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|datapath.vo|
+Z9 o-work work -O0
+!i10b 1
+Z10 !s100 3mL_49oZMKU[5i`O@3TZ73
+!s85 0
+Z11 !s108 1573445009.280000
+Z12 !s107 datapath.vo|
+!s101 -O0
+vdatapath_vlg_check_tst
+!i10b 1
+Z13 !s100 VaH>zb:zfajn>]adK_P]C0
+Z14 IJjgc4`6zC>FgmUXF8nQVC0
+Z15 V5_k<=Hl@??Lg]4d=jf9G12
+R3
+Z16 w1573445006
+Z17 8datapath.vt
+Z18 Fdatapath.vt
+L0 97
+R7
+r1
+!s85 0
+31
+Z19 !s108 1573445009.868000
+Z20 !s107 datapath.vt|
+Z21 !s90 -work|work|datapath.vt|
+!s101 -O0
+R9
+vdatapath_vlg_sample_tst
+!i10b 1
+Z22 !s100 <g7nWgP:b;O`YfL3`aWKP2
+Z23 I3IfS:7?Dh;BfZ_@L4[c2=0
+Z24 VL2EWk:L;>>z<`YCm1RQec1
+R3
+R16
+R17
+R18
+L0 29
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9
+vdatapath_vlg_vec_tst
+!i10b 1
+Z25 !s100 a=;Se1>ClTigVd`lCGU;F3
+Z26 Ihm[GihW9zn4nU145>HeYE0
+Z27 V^@Kb0LjGY<clOm@lcHMDA1
+R3
+R16
+R17
+R18
+Z28 L0 961
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9

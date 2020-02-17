@@ -1,0 +1,1152 @@
+TimeQuest Timing Analyzer report for micro
+Mon Dec 09 11:13:08 2019
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'controlador:Cont|state.inicio'
+ 12. Slow Model Setup: 'clk'
+ 13. Slow Model Hold: 'clk'
+ 14. Slow Model Hold: 'controlador:Cont|state.inicio'
+ 15. Slow Model Minimum Pulse Width: 'clk'
+ 16. Slow Model Minimum Pulse Width: 'controlador:Cont|state.inicio'
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Propagation Delay
+ 20. Minimum Propagation Delay
+ 21. Fast Model Setup Summary
+ 22. Fast Model Hold Summary
+ 23. Fast Model Recovery Summary
+ 24. Fast Model Removal Summary
+ 25. Fast Model Minimum Pulse Width Summary
+ 26. Fast Model Setup: 'controlador:Cont|state.inicio'
+ 27. Fast Model Setup: 'clk'
+ 28. Fast Model Hold: 'clk'
+ 29. Fast Model Hold: 'controlador:Cont|state.inicio'
+ 30. Fast Model Minimum Pulse Width: 'clk'
+ 31. Fast Model Minimum Pulse Width: 'controlador:Cont|state.inicio'
+ 32. Clock to Output Times
+ 33. Minimum Clock to Output Times
+ 34. Propagation Delay
+ 35. Minimum Propagation Delay
+ 36. Multicorner Timing Analysis Summary
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Progagation Delay
+ 40. Minimum Progagation Delay
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name      ; micro                                              ;
+; Device Family      ; Cyclone II                                         ;
+; Device Name        ; EP2C35F672C6                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Unavailable                                        ;
++--------------------+----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                       ;
++-------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------+
+; Clock Name                    ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                           ;
++-------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------+
+; clk                           ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                           ;
+; controlador:Cont|state.inicio ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { controlador:Cont|state.inicio } ;
++-------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                   ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 468.38 MHz ; 450.05 MHz      ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------------------------------+
+; Slow Model Setup Summary                               ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; controlador:Cont|state.inicio ; -2.852 ; -2.852        ;
+; clk                           ; -1.135 ; -7.564        ;
++-------------------------------+--------+---------------+
+
+
++--------------------------------------------------------+
+; Slow Model Hold Summary                                ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; clk                           ; -1.704 ; -18.842       ;
+; controlador:Cont|state.inicio ; 2.906  ; 0.000         ;
++-------------------------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++--------------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary                 ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; clk                           ; -1.222 ; -15.222       ;
+; controlador:Cont|state.inicio ; 0.500  ; 0.000         ;
++-------------------------------+--------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'controlador:Cont|state.inicio'                                                                                                       ;
++--------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                 ; Launch Clock ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+; -2.852 ; controlador:Cont|state.busca ; controlador:Cont|PC_ldC ; clk          ; controlador:Cont|state.inicio ; 0.500        ; -1.700     ; 0.706      ;
++--------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                                                   ;
++--------+-------------------------------------+-------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                           ; To Node                             ; Launch Clock                  ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------+-------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; -1.135 ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 1.000        ; 0.000      ; 2.171      ;
+; -1.069 ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 1.000        ; 0.000      ; 2.105      ;
+; -1.064 ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 2.100      ;
+; -1.004 ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 1.000        ; 0.000      ; 2.040      ;
+; -0.998 ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 2.034      ;
+; -0.993 ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 2.029      ;
+; -0.968 ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 1.000        ; 0.000      ; 2.004      ;
+; -0.933 ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.969      ;
+; -0.927 ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.963      ;
+; -0.897 ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.933      ;
+; -0.862 ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.898      ;
+; -0.862 ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.898      ;
+; -0.834 ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.870      ;
+; -0.827 ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.863      ;
+; -0.826 ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.862      ;
+; -0.791 ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.827      ;
+; -0.768 ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.804      ;
+; -0.763 ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.799      ;
+; -0.756 ; datapath:DP|PC:PC1|address_prog[6]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.792      ;
+; -0.756 ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.792      ;
+; -0.720 ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.756      ;
+; -0.703 ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.739      ;
+; -0.697 ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.733      ;
+; -0.692 ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.728      ;
+; -0.685 ; datapath:DP|PC:PC1|address_prog[6]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.721      ;
+; -0.685 ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.721      ;
+; -0.667 ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.703      ;
+; -0.653 ; datapath:DP|PC:PC1|address_prog[7]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.689      ;
+; -0.632 ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.668      ;
+; -0.626 ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.662      ;
+; -0.621 ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[4]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.657      ;
+; -0.614 ; datapath:DP|PC:PC1|address_prog[6]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.650      ;
+; -0.596 ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.632      ;
+; -0.582 ; datapath:DP|PC:PC1|address_prog[7]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.618      ;
+; -0.561 ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.597      ;
+; -0.561 ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.597      ;
+; -0.555 ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[4]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.591      ;
+; -0.550 ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[3]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.586      ;
+; -0.526 ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.562      ;
+; -0.525 ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.561      ;
+; -0.522 ; datapath:DP|PC:PC1|address_prog[8]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.558      ;
+; -0.511 ; datapath:DP|PC:PC1|address_prog[7]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.547      ;
+; -0.490 ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.526      ;
+; -0.490 ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[4]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.526      ;
+; -0.484 ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[3]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.520      ;
+; -0.479 ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[2]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.515      ;
+; -0.455 ; datapath:DP|PC:PC1|address_prog[6]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.491      ;
+; -0.455 ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.491      ;
+; -0.454 ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[4]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.490      ;
+; -0.451 ; datapath:DP|PC:PC1|address_prog[8]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.487      ;
+; -0.419 ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.455      ;
+; -0.419 ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[3]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.455      ;
+; -0.414 ; datapath:DP|PC:PC1|address_prog[9]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.450      ;
+; -0.413 ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[2]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.449      ;
+; -0.408 ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[1]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.444      ;
+; -0.069 ; datapath:DP|PC:PC1|address_prog[6]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.105      ;
+; -0.069 ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.105      ;
+; -0.068 ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[3]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.104      ;
+; -0.065 ; datapath:DP|PC:PC1|address_prog[10] ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.101      ;
+; -0.065 ; datapath:DP|PC:PC1|address_prog[8]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.101      ;
+; -0.036 ; datapath:DP|PC:PC1|address_prog[7]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.072      ;
+; -0.036 ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[4]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.072      ;
+; -0.036 ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[2]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.072      ;
+; -0.031 ; datapath:DP|PC:PC1|address_prog[9]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.067      ;
+; -0.030 ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[1]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.066      ;
+; -0.025 ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[0]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.061      ;
+; 0.248  ; controlador:Cont|state.busca        ; controlador:Cont|state.decod        ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.788      ;
+; 0.250  ; controlador:Cont|state.decod        ; controlador:Cont|state.busca        ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.786      ;
+; 0.379  ; controlador:Cont|state.busca        ; controlador:Cont|state.busca        ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.657      ;
+; 1.021  ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[0]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.692      ; 1.707      ;
+; 1.021  ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[1]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.692      ; 1.707      ;
+; 1.021  ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[2]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.692      ; 1.707      ;
+; 1.021  ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[3]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.692      ; 1.707      ;
+; 1.021  ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[4]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.692      ; 1.707      ;
+; 1.021  ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[5]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.692      ; 1.707      ;
+; 1.021  ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[6]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.692      ; 1.707      ;
+; 1.021  ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[7]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.692      ; 1.707      ;
+; 1.021  ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[8]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.692      ; 1.707      ;
+; 1.021  ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[9]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.692      ; 1.707      ;
+; 1.021  ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[10] ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.692      ; 1.707      ;
+; 1.154  ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[0]  ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 2.285      ; 1.917      ;
+; 1.154  ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[1]  ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 2.285      ; 1.917      ;
+; 1.154  ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[2]  ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 2.285      ; 1.917      ;
+; 1.154  ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[3]  ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 2.285      ; 1.917      ;
+; 1.154  ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[4]  ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 2.285      ; 1.917      ;
+; 1.154  ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[5]  ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 2.285      ; 1.917      ;
+; 1.154  ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[6]  ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 2.285      ; 1.917      ;
+; 1.154  ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[7]  ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 2.285      ; 1.917      ;
+; 1.154  ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[8]  ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 2.285      ; 1.917      ;
+; 1.154  ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[9]  ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 2.285      ; 1.917      ;
+; 1.154  ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[10] ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 2.285      ; 1.917      ;
+; 1.654  ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[0]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 2.285      ; 1.917      ;
+; 1.654  ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[1]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 2.285      ; 1.917      ;
+; 1.654  ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[2]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 2.285      ; 1.917      ;
+; 1.654  ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[3]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 2.285      ; 1.917      ;
+; 1.654  ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[4]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 2.285      ; 1.917      ;
+; 1.654  ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[5]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 2.285      ; 1.917      ;
+; 1.654  ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[6]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 2.285      ; 1.917      ;
+; 1.654  ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[7]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 2.285      ; 1.917      ;
+; 1.654  ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[8]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 2.285      ; 1.917      ;
++--------+-------------------------------------+-------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                                    ;
++--------+-------------------------------------+-------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                           ; To Node                             ; Launch Clock                  ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------+-------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; -1.704 ; controlador:Cont|state.inicio       ; controlador:Cont|state.busca        ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 2.293      ; 1.105      ;
+; -1.558 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[0]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 2.285      ; 1.243      ;
+; -1.558 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[1]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 2.285      ; 1.243      ;
+; -1.558 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[2]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 2.285      ; 1.243      ;
+; -1.558 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[3]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 2.285      ; 1.243      ;
+; -1.558 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[4]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 2.285      ; 1.243      ;
+; -1.558 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[5]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 2.285      ; 1.243      ;
+; -1.558 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[6]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 2.285      ; 1.243      ;
+; -1.558 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[7]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 2.285      ; 1.243      ;
+; -1.558 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[8]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 2.285      ; 1.243      ;
+; -1.558 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[9]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 2.285      ; 1.243      ;
+; -1.558 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[10] ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 2.285      ; 1.243      ;
+; -1.204 ; controlador:Cont|state.inicio       ; controlador:Cont|state.busca        ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 2.293      ; 1.105      ;
+; -1.058 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[0]  ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 2.285      ; 1.243      ;
+; -1.058 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[1]  ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 2.285      ; 1.243      ;
+; -1.058 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[2]  ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 2.285      ; 1.243      ;
+; -1.058 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[3]  ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 2.285      ; 1.243      ;
+; -1.058 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[4]  ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 2.285      ; 1.243      ;
+; -1.058 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[5]  ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 2.285      ; 1.243      ;
+; -1.058 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[6]  ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 2.285      ; 1.243      ;
+; -1.058 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[7]  ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 2.285      ; 1.243      ;
+; -1.058 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[8]  ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 2.285      ; 1.243      ;
+; -1.058 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[9]  ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 2.285      ; 1.243      ;
+; -1.058 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[10] ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 2.285      ; 1.243      ;
+; -0.251 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[0]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.692      ; 1.707      ;
+; -0.251 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[1]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.692      ; 1.707      ;
+; -0.251 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[2]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.692      ; 1.707      ;
+; -0.251 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[3]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.692      ; 1.707      ;
+; -0.251 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[4]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.692      ; 1.707      ;
+; -0.251 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[5]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.692      ; 1.707      ;
+; -0.251 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[6]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.692      ; 1.707      ;
+; -0.251 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[7]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.692      ; 1.707      ;
+; -0.251 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[8]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.692      ; 1.707      ;
+; -0.251 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[9]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.692      ; 1.707      ;
+; -0.251 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[10] ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.692      ; 1.707      ;
+; 0.391  ; controlador:Cont|state.busca        ; controlador:Cont|state.busca        ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.520  ; controlador:Cont|state.decod        ; controlador:Cont|state.busca        ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.786      ;
+; 0.522  ; controlador:Cont|state.busca        ; controlador:Cont|state.decod        ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.788      ;
+; 0.795  ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[0]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.061      ;
+; 0.800  ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[1]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.066      ;
+; 0.801  ; datapath:DP|PC:PC1|address_prog[9]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.067      ;
+; 0.806  ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[2]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[4]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; datapath:DP|PC:PC1|address_prog[7]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.835  ; datapath:DP|PC:PC1|address_prog[8]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.101      ;
+; 0.835  ; datapath:DP|PC:PC1|address_prog[10] ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.101      ;
+; 0.838  ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[3]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.839  ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.105      ;
+; 0.839  ; datapath:DP|PC:PC1|address_prog[6]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.105      ;
+; 1.178  ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[1]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.444      ;
+; 1.183  ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[2]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.449      ;
+; 1.184  ; datapath:DP|PC:PC1|address_prog[9]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.450      ;
+; 1.189  ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[3]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189  ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.455      ;
+; 1.221  ; datapath:DP|PC:PC1|address_prog[8]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.487      ;
+; 1.224  ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[4]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.225  ; datapath:DP|PC:PC1|address_prog[6]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.491      ;
+; 1.225  ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.491      ;
+; 1.249  ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[2]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.515      ;
+; 1.254  ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[3]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.520      ;
+; 1.260  ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[4]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260  ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.526      ;
+; 1.281  ; datapath:DP|PC:PC1|address_prog[7]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.547      ;
+; 1.292  ; datapath:DP|PC:PC1|address_prog[8]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.558      ;
+; 1.295  ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.561      ;
+; 1.296  ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.562      ;
+; 1.320  ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[3]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.586      ;
+; 1.325  ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[4]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.591      ;
+; 1.331  ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.597      ;
+; 1.331  ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.597      ;
+; 1.352  ; datapath:DP|PC:PC1|address_prog[7]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.618      ;
+; 1.366  ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.632      ;
+; 1.384  ; datapath:DP|PC:PC1|address_prog[6]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.650      ;
+; 1.391  ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[4]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.657      ;
+; 1.396  ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.662      ;
+; 1.402  ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.668      ;
+; 1.423  ; datapath:DP|PC:PC1|address_prog[7]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.689      ;
+; 1.437  ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.703      ;
+; 1.455  ; datapath:DP|PC:PC1|address_prog[6]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.721      ;
+; 1.455  ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.721      ;
+; 1.462  ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.728      ;
+; 1.467  ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.733      ;
+; 1.473  ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.739      ;
+; 1.490  ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.756      ;
+; 1.526  ; datapath:DP|PC:PC1|address_prog[6]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.792      ;
+; 1.526  ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.792      ;
+; 1.533  ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.799      ;
+; 1.538  ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.804      ;
+; 1.561  ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.827      ;
+; 1.596  ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.862      ;
+; 1.597  ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.863      ;
+; 1.604  ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.870      ;
+; 1.632  ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.898      ;
+; 1.632  ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.898      ;
+; 1.667  ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.933      ;
+; 1.697  ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.963      ;
+; 1.703  ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 1.969      ;
+; 1.738  ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 0.000        ; 0.000      ; 2.004      ;
+; 1.763  ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 2.029      ;
+; 1.768  ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 2.034      ;
++--------+-------------------------------------+-------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'controlador:Cont|state.inicio'                                                                                                       ;
++-------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                 ; Launch Clock ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+; 2.906 ; controlador:Cont|state.busca ; controlador:Cont|PC_ldC ; clk          ; controlador:Cont|state.inicio ; -0.500       ; -1.700     ; 0.706      ;
++-------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                                ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; clk   ; Rise       ; clk                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controlador:Cont|state.busca        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controlador:Cont|state.busca        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controlador:Cont|state.decod        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controlador:Cont|state.decod        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controlador:Cont|state.inicio       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controlador:Cont|state.inicio       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[9]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; Cont|state.busca|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; Cont|state.busca|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; Cont|state.decod|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; Cont|state.decod|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; Cont|state.inicio|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; Cont|state.inicio|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[0]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[0]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[10]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[10]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[1]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[1]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[2]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[2]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[3]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[3]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[4]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[4]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[5]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[5]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[6]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[6]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[7]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[7]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[8]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[8]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[9]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[9]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                         ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'controlador:Cont|state.inicio'                                                                  ;
++-------+--------------+----------------+------------------+-------------------------------+------------+--------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                         ; Clock Edge ; Target                   ;
++-------+--------------+----------------+------------------+-------------------------------+------------+--------------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controlador:Cont|state.inicio ; Rise       ; Cont|PC_ldC|datac        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controlador:Cont|state.inicio ; Rise       ; Cont|PC_ldC|datac        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controlador:Cont|state.inicio ; Rise       ; Cont|state.inicio|regout ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controlador:Cont|state.inicio ; Rise       ; Cont|state.inicio|regout ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controlador:Cont|state.inicio ; Fall       ; controlador:Cont|PC_ldC  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controlador:Cont|state.inicio ; Fall       ; controlador:Cont|PC_ldC  ;
++-------+--------------+----------------+------------------+-------------------------------+------------+--------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Clock to Output Times                                                         ;
++-------------------+------------+-------+-------+------------+-----------------+
+; Data Port         ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------------+------------+-------+-------+------------+-----------------+
+; saiClock          ; clk        ; 8.260 ; 8.260 ; Rise       ; clk             ;
+; outGenerico2[*]   ; clk        ; 8.800 ; 8.800 ; Fall       ; clk             ;
+;  outGenerico2[0]  ; clk        ; 8.388 ; 8.388 ; Fall       ; clk             ;
+;  outGenerico2[1]  ; clk        ; 8.491 ; 8.491 ; Fall       ; clk             ;
+;  outGenerico2[2]  ; clk        ; 8.800 ; 8.800 ; Fall       ; clk             ;
+;  outGenerico2[3]  ; clk        ; 8.561 ; 8.561 ; Fall       ; clk             ;
+;  outGenerico2[4]  ; clk        ; 5.970 ; 5.970 ; Fall       ; clk             ;
+;  outGenerico2[5]  ; clk        ; 6.206 ; 6.206 ; Fall       ; clk             ;
+;  outGenerico2[6]  ; clk        ; 5.987 ; 5.987 ; Fall       ; clk             ;
+;  outGenerico2[7]  ; clk        ; 6.003 ; 6.003 ; Fall       ; clk             ;
+;  outGenerico2[8]  ; clk        ; 5.849 ; 5.849 ; Fall       ; clk             ;
+;  outGenerico2[9]  ; clk        ; 5.984 ; 5.984 ; Fall       ; clk             ;
+;  outGenerico2[10] ; clk        ; 6.155 ; 6.155 ; Fall       ; clk             ;
+; saiClock          ; clk        ; 8.260 ; 8.260 ; Fall       ; clk             ;
++-------------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                 ;
++-------------------+------------+-------+-------+------------+-----------------+
+; Data Port         ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------------+------------+-------+-------+------------+-----------------+
+; saiClock          ; clk        ; 8.260 ; 8.260 ; Rise       ; clk             ;
+; outGenerico2[*]   ; clk        ; 5.849 ; 5.849 ; Fall       ; clk             ;
+;  outGenerico2[0]  ; clk        ; 8.388 ; 8.388 ; Fall       ; clk             ;
+;  outGenerico2[1]  ; clk        ; 8.491 ; 8.491 ; Fall       ; clk             ;
+;  outGenerico2[2]  ; clk        ; 8.800 ; 8.800 ; Fall       ; clk             ;
+;  outGenerico2[3]  ; clk        ; 8.561 ; 8.561 ; Fall       ; clk             ;
+;  outGenerico2[4]  ; clk        ; 5.970 ; 5.970 ; Fall       ; clk             ;
+;  outGenerico2[5]  ; clk        ; 6.206 ; 6.206 ; Fall       ; clk             ;
+;  outGenerico2[6]  ; clk        ; 5.987 ; 5.987 ; Fall       ; clk             ;
+;  outGenerico2[7]  ; clk        ; 6.003 ; 6.003 ; Fall       ; clk             ;
+;  outGenerico2[8]  ; clk        ; 5.849 ; 5.849 ; Fall       ; clk             ;
+;  outGenerico2[9]  ; clk        ; 5.984 ; 5.984 ; Fall       ; clk             ;
+;  outGenerico2[10] ; clk        ; 6.155 ; 6.155 ; Fall       ; clk             ;
+; saiClock          ; clk        ; 8.260 ; 8.260 ; Fall       ; clk             ;
++-------------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; reset      ; ResetOut    ; 9.313 ;    ;    ; 9.313 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; reset      ; ResetOut    ; 9.313 ;    ;    ; 9.313 ;
++------------+-------------+-------+----+----+-------+
+
+
++--------------------------------------------------------+
+; Fast Model Setup Summary                               ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; controlador:Cont|state.inicio ; -1.222 ; -1.222        ;
+; clk                           ; 0.013  ; 0.000         ;
++-------------------------------+--------+---------------+
+
+
++--------------------------------------------------------+
+; Fast Model Hold Summary                                ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; clk                           ; -1.014 ; -10.595       ;
+; controlador:Cont|state.inicio ; 1.833  ; 0.000         ;
++-------------------------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++--------------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary                 ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; clk                           ; -1.222 ; -15.222       ;
+; controlador:Cont|state.inicio ; 0.500  ; 0.000         ;
++-------------------------------+--------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'controlador:Cont|state.inicio'                                                                                                       ;
++--------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                 ; Launch Clock ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+; -1.222 ; controlador:Cont|state.busca ; controlador:Cont|PC_ldC ; clk          ; controlador:Cont|state.inicio ; 0.500        ; -0.981     ; 0.352      ;
++--------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                                                  ;
++-------+-------------------------------------+-------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock                  ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; 0.013 ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 1.000        ; 0.000      ; 1.019      ;
+; 0.046 ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.986      ;
+; 0.048 ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.984      ;
+; 0.078 ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.954      ;
+; 0.081 ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.951      ;
+; 0.083 ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.949      ;
+; 0.100 ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.932      ;
+; 0.113 ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.919      ;
+; 0.116 ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.916      ;
+; 0.135 ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.897      ;
+; 0.147 ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.885      ;
+; 0.148 ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.884      ;
+; 0.169 ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.863      ;
+; 0.170 ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.862      ;
+; 0.177 ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.855      ;
+; 0.182 ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.850      ;
+; 0.204 ; datapath:DP|PC:PC1|address_prog[6]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.828      ;
+; 0.204 ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.828      ;
+; 0.210 ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.822      ;
+; 0.212 ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.820      ;
+; 0.217 ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.815      ;
+; 0.239 ; datapath:DP|PC:PC1|address_prog[6]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.793      ;
+; 0.239 ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.793      ;
+; 0.242 ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.790      ;
+; 0.245 ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.787      ;
+; 0.247 ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.785      ;
+; 0.256 ; datapath:DP|PC:PC1|address_prog[7]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.776      ;
+; 0.264 ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.768      ;
+; 0.274 ; datapath:DP|PC:PC1|address_prog[6]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.758      ;
+; 0.277 ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.755      ;
+; 0.280 ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.752      ;
+; 0.282 ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[4]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.750      ;
+; 0.291 ; datapath:DP|PC:PC1|address_prog[7]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.741      ;
+; 0.299 ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.733      ;
+; 0.311 ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.721      ;
+; 0.312 ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.720      ;
+; 0.315 ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[4]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.717      ;
+; 0.317 ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[3]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.715      ;
+; 0.326 ; datapath:DP|PC:PC1|address_prog[7]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.706      ;
+; 0.333 ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.699      ;
+; 0.334 ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.698      ;
+; 0.336 ; datapath:DP|PC:PC1|address_prog[8]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.696      ;
+; 0.346 ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.686      ;
+; 0.347 ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[4]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.685      ;
+; 0.350 ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[3]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.682      ;
+; 0.352 ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[2]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.680      ;
+; 0.368 ; datapath:DP|PC:PC1|address_prog[6]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.664      ;
+; 0.368 ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.664      ;
+; 0.369 ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[4]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.663      ;
+; 0.371 ; datapath:DP|PC:PC1|address_prog[8]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.661      ;
+; 0.381 ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.651      ;
+; 0.382 ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[3]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.650      ;
+; 0.385 ; datapath:DP|PC:PC1|address_prog[9]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.647      ;
+; 0.385 ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[2]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.647      ;
+; 0.387 ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[1]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.645      ;
+; 0.508 ; datapath:DP|PC:PC1|address_prog[6]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.524      ;
+; 0.508 ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.524      ;
+; 0.509 ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[3]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.523      ;
+; 0.511 ; datapath:DP|PC:PC1|address_prog[10] ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.521      ;
+; 0.511 ; datapath:DP|PC:PC1|address_prog[8]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.521      ;
+; 0.519 ; datapath:DP|PC:PC1|address_prog[7]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.513      ;
+; 0.519 ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[4]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.513      ;
+; 0.520 ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[2]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.512      ;
+; 0.523 ; datapath:DP|PC:PC1|address_prog[9]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.509      ;
+; 0.523 ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[1]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.509      ;
+; 0.525 ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[0]  ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.507      ;
+; 0.639 ; controlador:Cont|state.busca        ; controlador:Cont|state.decod        ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.393      ;
+; 0.641 ; controlador:Cont|state.decod        ; controlador:Cont|state.busca        ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.391      ;
+; 0.665 ; controlador:Cont|state.busca        ; controlador:Cont|state.busca        ; clk                           ; clk         ; 1.000        ; 0.000      ; 0.367      ;
+; 0.954 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[0]  ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 1.241      ; 0.960      ;
+; 0.954 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[1]  ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 1.241      ; 0.960      ;
+; 0.954 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[2]  ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 1.241      ; 0.960      ;
+; 0.954 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[3]  ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 1.241      ; 0.960      ;
+; 0.954 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[4]  ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 1.241      ; 0.960      ;
+; 0.954 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[5]  ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 1.241      ; 0.960      ;
+; 0.954 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[6]  ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 1.241      ; 0.960      ;
+; 0.954 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[7]  ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 1.241      ; 0.960      ;
+; 0.954 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[8]  ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 1.241      ; 0.960      ;
+; 0.954 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[9]  ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 1.241      ; 0.960      ;
+; 0.954 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[10] ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 1.241      ; 0.960      ;
+; 1.182 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[0]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 0.977      ; 0.827      ;
+; 1.182 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[1]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 0.977      ; 0.827      ;
+; 1.182 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[2]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 0.977      ; 0.827      ;
+; 1.182 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[3]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 0.977      ; 0.827      ;
+; 1.182 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[4]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 0.977      ; 0.827      ;
+; 1.182 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[5]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 0.977      ; 0.827      ;
+; 1.182 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[6]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 0.977      ; 0.827      ;
+; 1.182 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[7]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 0.977      ; 0.827      ;
+; 1.182 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[8]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 0.977      ; 0.827      ;
+; 1.182 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[9]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 0.977      ; 0.827      ;
+; 1.182 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[10] ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 0.977      ; 0.827      ;
+; 1.394 ; controlador:Cont|state.inicio       ; controlador:Cont|state.busca        ; controlador:Cont|state.inicio ; clk         ; 0.500        ; 1.245      ; 0.524      ;
+; 1.454 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[0]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.241      ; 0.960      ;
+; 1.454 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[1]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.241      ; 0.960      ;
+; 1.454 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[2]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.241      ; 0.960      ;
+; 1.454 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[3]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.241      ; 0.960      ;
+; 1.454 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[4]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.241      ; 0.960      ;
+; 1.454 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[5]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.241      ; 0.960      ;
+; 1.454 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[6]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.241      ; 0.960      ;
+; 1.454 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[7]  ; controlador:Cont|state.inicio ; clk         ; 1.000        ; 1.241      ; 0.960      ;
++-------+-------------------------------------+-------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                                    ;
++--------+-------------------------------------+-------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                           ; To Node                             ; Launch Clock                  ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------+-------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; -1.014 ; controlador:Cont|state.inicio       ; controlador:Cont|state.busca        ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.245      ; 0.524      ;
+; -0.871 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[0]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.241      ; 0.663      ;
+; -0.871 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[1]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.241      ; 0.663      ;
+; -0.871 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[2]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.241      ; 0.663      ;
+; -0.871 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[3]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.241      ; 0.663      ;
+; -0.871 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[4]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.241      ; 0.663      ;
+; -0.871 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[5]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.241      ; 0.663      ;
+; -0.871 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[6]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.241      ; 0.663      ;
+; -0.871 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[7]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.241      ; 0.663      ;
+; -0.871 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[8]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.241      ; 0.663      ;
+; -0.871 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[9]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.241      ; 0.663      ;
+; -0.871 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[10] ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 1.241      ; 0.663      ;
+; -0.514 ; controlador:Cont|state.inicio       ; controlador:Cont|state.busca        ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 1.245      ; 0.524      ;
+; -0.371 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[0]  ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 1.241      ; 0.663      ;
+; -0.371 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[1]  ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 1.241      ; 0.663      ;
+; -0.371 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[2]  ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 1.241      ; 0.663      ;
+; -0.371 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[3]  ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 1.241      ; 0.663      ;
+; -0.371 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[4]  ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 1.241      ; 0.663      ;
+; -0.371 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[5]  ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 1.241      ; 0.663      ;
+; -0.371 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[6]  ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 1.241      ; 0.663      ;
+; -0.371 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[7]  ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 1.241      ; 0.663      ;
+; -0.371 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[8]  ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 1.241      ; 0.663      ;
+; -0.371 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[9]  ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 1.241      ; 0.663      ;
+; -0.371 ; controlador:Cont|state.inicio       ; datapath:DP|PC:PC1|address_prog[10] ; controlador:Cont|state.inicio ; clk         ; -0.500       ; 1.241      ; 0.663      ;
+; -0.302 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[0]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 0.977      ; 0.827      ;
+; -0.302 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[1]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 0.977      ; 0.827      ;
+; -0.302 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[2]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 0.977      ; 0.827      ;
+; -0.302 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[3]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 0.977      ; 0.827      ;
+; -0.302 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[4]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 0.977      ; 0.827      ;
+; -0.302 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[5]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 0.977      ; 0.827      ;
+; -0.302 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[6]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 0.977      ; 0.827      ;
+; -0.302 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[7]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 0.977      ; 0.827      ;
+; -0.302 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[8]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 0.977      ; 0.827      ;
+; -0.302 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[9]  ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 0.977      ; 0.827      ;
+; -0.302 ; controlador:Cont|PC_ldC             ; datapath:DP|PC:PC1|address_prog[10] ; controlador:Cont|state.inicio ; clk         ; 0.000        ; 0.977      ; 0.827      ;
+; 0.215  ; controlador:Cont|state.busca        ; controlador:Cont|state.busca        ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.239  ; controlador:Cont|state.decod        ; controlador:Cont|state.busca        ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.391      ;
+; 0.241  ; controlador:Cont|state.busca        ; controlador:Cont|state.decod        ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.393      ;
+; 0.355  ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[0]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.507      ;
+; 0.357  ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[1]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.509      ;
+; 0.357  ; datapath:DP|PC:PC1|address_prog[9]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.509      ;
+; 0.360  ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[2]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361  ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[4]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361  ; datapath:DP|PC:PC1|address_prog[7]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.369  ; datapath:DP|PC:PC1|address_prog[8]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369  ; datapath:DP|PC:PC1|address_prog[10] ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.371  ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[3]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372  ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372  ; datapath:DP|PC:PC1|address_prog[6]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.493  ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[1]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.645      ;
+; 0.495  ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[2]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.647      ;
+; 0.495  ; datapath:DP|PC:PC1|address_prog[9]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.647      ;
+; 0.498  ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[3]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.650      ;
+; 0.499  ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.509  ; datapath:DP|PC:PC1|address_prog[8]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.661      ;
+; 0.511  ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[4]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.512  ; datapath:DP|PC:PC1|address_prog[6]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512  ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.664      ;
+; 0.528  ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[2]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.680      ;
+; 0.530  ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[3]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.682      ;
+; 0.533  ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[4]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.685      ;
+; 0.534  ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.686      ;
+; 0.544  ; datapath:DP|PC:PC1|address_prog[8]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.696      ;
+; 0.546  ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.698      ;
+; 0.547  ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.699      ;
+; 0.554  ; datapath:DP|PC:PC1|address_prog[7]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.706      ;
+; 0.563  ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[3]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.715      ;
+; 0.565  ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[4]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.717      ;
+; 0.568  ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.720      ;
+; 0.569  ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.721      ;
+; 0.581  ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.733      ;
+; 0.589  ; datapath:DP|PC:PC1|address_prog[7]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.741      ;
+; 0.598  ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[4]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.750      ;
+; 0.600  ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.752      ;
+; 0.603  ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.755      ;
+; 0.606  ; datapath:DP|PC:PC1|address_prog[6]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.758      ;
+; 0.616  ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.768      ;
+; 0.624  ; datapath:DP|PC:PC1|address_prog[7]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.776      ;
+; 0.633  ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[5]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.785      ;
+; 0.635  ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.787      ;
+; 0.638  ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.790      ;
+; 0.641  ; datapath:DP|PC:PC1|address_prog[6]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.793      ;
+; 0.641  ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.793      ;
+; 0.663  ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.815      ;
+; 0.668  ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[6]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.820      ;
+; 0.670  ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.822      ;
+; 0.676  ; datapath:DP|PC:PC1|address_prog[6]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.828      ;
+; 0.676  ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.828      ;
+; 0.698  ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.850      ;
+; 0.703  ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[7]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.855      ;
+; 0.710  ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.862      ;
+; 0.711  ; datapath:DP|PC:PC1|address_prog[5]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.863      ;
+; 0.732  ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.884      ;
+; 0.733  ; datapath:DP|PC:PC1|address_prog[4]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.885      ;
+; 0.745  ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.897      ;
+; 0.764  ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.916      ;
+; 0.767  ; datapath:DP|PC:PC1|address_prog[2]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.919      ;
+; 0.780  ; datapath:DP|PC:PC1|address_prog[3]  ; datapath:DP|PC:PC1|address_prog[10] ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.932      ;
+; 0.797  ; datapath:DP|PC:PC1|address_prog[0]  ; datapath:DP|PC:PC1|address_prog[8]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.949      ;
+; 0.799  ; datapath:DP|PC:PC1|address_prog[1]  ; datapath:DP|PC:PC1|address_prog[9]  ; clk                           ; clk         ; 0.000        ; 0.000      ; 0.951      ;
++--------+-------------------------------------+-------------------------------------+-------------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'controlador:Cont|state.inicio'                                                                                                       ;
++-------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                 ; Launch Clock ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+; 1.833 ; controlador:Cont|state.busca ; controlador:Cont|PC_ldC ; clk          ; controlador:Cont|state.inicio ; -0.500       ; -0.981     ; 0.352      ;
++-------+------------------------------+-------------------------+--------------+-------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                                ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; clk   ; Rise       ; clk                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controlador:Cont|state.busca        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controlador:Cont|state.busca        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controlador:Cont|state.decod        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controlador:Cont|state.decod        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; controlador:Cont|state.inicio       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; controlador:Cont|state.inicio       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; datapath:DP|PC:PC1|address_prog[9]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; Cont|state.busca|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; Cont|state.busca|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; Cont|state.decod|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; Cont|state.decod|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; Cont|state.inicio|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; Cont|state.inicio|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[0]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[0]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[10]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[10]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[1]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[1]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[2]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[2]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[3]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[3]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[4]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[4]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[5]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[5]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[6]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[6]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[7]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[7]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[8]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[8]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; DP|PC1|address_prog[9]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; DP|PC1|address_prog[9]|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                         ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'controlador:Cont|state.inicio'                                                                  ;
++-------+--------------+----------------+------------------+-------------------------------+------------+--------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                         ; Clock Edge ; Target                   ;
++-------+--------------+----------------+------------------+-------------------------------+------------+--------------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controlador:Cont|state.inicio ; Rise       ; Cont|PC_ldC|datac        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controlador:Cont|state.inicio ; Rise       ; Cont|PC_ldC|datac        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controlador:Cont|state.inicio ; Rise       ; Cont|state.inicio|regout ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controlador:Cont|state.inicio ; Rise       ; Cont|state.inicio|regout ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; controlador:Cont|state.inicio ; Fall       ; controlador:Cont|PC_ldC  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; controlador:Cont|state.inicio ; Fall       ; controlador:Cont|PC_ldC  ;
++-------+--------------+----------------+------------------+-------------------------------+------------+--------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Clock to Output Times                                                         ;
++-------------------+------------+-------+-------+------------+-----------------+
+; Data Port         ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------------+------------+-------+-------+------------+-----------------+
+; saiClock          ; clk        ; 4.746 ; 4.746 ; Rise       ; clk             ;
+; outGenerico2[*]   ; clk        ; 4.631 ; 4.631 ; Fall       ; clk             ;
+;  outGenerico2[0]  ; clk        ; 4.468 ; 4.468 ; Fall       ; clk             ;
+;  outGenerico2[1]  ; clk        ; 4.433 ; 4.433 ; Fall       ; clk             ;
+;  outGenerico2[2]  ; clk        ; 4.631 ; 4.631 ; Fall       ; clk             ;
+;  outGenerico2[3]  ; clk        ; 4.522 ; 4.522 ; Fall       ; clk             ;
+;  outGenerico2[4]  ; clk        ; 3.177 ; 3.177 ; Fall       ; clk             ;
+;  outGenerico2[5]  ; clk        ; 3.307 ; 3.307 ; Fall       ; clk             ;
+;  outGenerico2[6]  ; clk        ; 3.189 ; 3.189 ; Fall       ; clk             ;
+;  outGenerico2[7]  ; clk        ; 3.195 ; 3.195 ; Fall       ; clk             ;
+;  outGenerico2[8]  ; clk        ; 3.118 ; 3.118 ; Fall       ; clk             ;
+;  outGenerico2[9]  ; clk        ; 3.189 ; 3.189 ; Fall       ; clk             ;
+;  outGenerico2[10] ; clk        ; 3.261 ; 3.261 ; Fall       ; clk             ;
+; saiClock          ; clk        ; 4.746 ; 4.746 ; Fall       ; clk             ;
++-------------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                 ;
++-------------------+------------+-------+-------+------------+-----------------+
+; Data Port         ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------------+------------+-------+-------+------------+-----------------+
+; saiClock          ; clk        ; 4.746 ; 4.746 ; Rise       ; clk             ;
+; outGenerico2[*]   ; clk        ; 3.118 ; 3.118 ; Fall       ; clk             ;
+;  outGenerico2[0]  ; clk        ; 4.468 ; 4.468 ; Fall       ; clk             ;
+;  outGenerico2[1]  ; clk        ; 4.433 ; 4.433 ; Fall       ; clk             ;
+;  outGenerico2[2]  ; clk        ; 4.631 ; 4.631 ; Fall       ; clk             ;
+;  outGenerico2[3]  ; clk        ; 4.522 ; 4.522 ; Fall       ; clk             ;
+;  outGenerico2[4]  ; clk        ; 3.177 ; 3.177 ; Fall       ; clk             ;
+;  outGenerico2[5]  ; clk        ; 3.307 ; 3.307 ; Fall       ; clk             ;
+;  outGenerico2[6]  ; clk        ; 3.189 ; 3.189 ; Fall       ; clk             ;
+;  outGenerico2[7]  ; clk        ; 3.195 ; 3.195 ; Fall       ; clk             ;
+;  outGenerico2[8]  ; clk        ; 3.118 ; 3.118 ; Fall       ; clk             ;
+;  outGenerico2[9]  ; clk        ; 3.189 ; 3.189 ; Fall       ; clk             ;
+;  outGenerico2[10] ; clk        ; 3.261 ; 3.261 ; Fall       ; clk             ;
+; saiClock          ; clk        ; 4.746 ; 4.746 ; Fall       ; clk             ;
++-------------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; reset      ; ResetOut    ; 5.369 ;    ;    ; 5.369 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; reset      ; ResetOut    ; 5.369 ;    ;    ; 5.369 ;
++------------+-------------+-------+----+----+-------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                           ;
++--------------------------------+---------+---------+----------+---------+---------------------+
+; Clock                          ; Setup   ; Hold    ; Recovery ; Removal ; Minimum Pulse Width ;
++--------------------------------+---------+---------+----------+---------+---------------------+
+; Worst-case Slack               ; -2.852  ; -1.704  ; N/A      ; N/A     ; -1.222              ;
+;  clk                           ; -1.135  ; -1.704  ; N/A      ; N/A     ; -1.222              ;
+;  controlador:Cont|state.inicio ; -2.852  ; 1.833   ; N/A      ; N/A     ; 0.500               ;
+; Design-wide TNS                ; -10.416 ; -18.842 ; 0.0      ; 0.0     ; -15.222             ;
+;  clk                           ; -7.564  ; -18.842 ; N/A      ; N/A     ; -15.222             ;
+;  controlador:Cont|state.inicio ; -2.852  ; 0.000   ; N/A      ; N/A     ; 0.000               ;
++--------------------------------+---------+---------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------------+
+; Clock to Output Times                                                         ;
++-------------------+------------+-------+-------+------------+-----------------+
+; Data Port         ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------------+------------+-------+-------+------------+-----------------+
+; saiClock          ; clk        ; 8.260 ; 8.260 ; Rise       ; clk             ;
+; outGenerico2[*]   ; clk        ; 8.800 ; 8.800 ; Fall       ; clk             ;
+;  outGenerico2[0]  ; clk        ; 8.388 ; 8.388 ; Fall       ; clk             ;
+;  outGenerico2[1]  ; clk        ; 8.491 ; 8.491 ; Fall       ; clk             ;
+;  outGenerico2[2]  ; clk        ; 8.800 ; 8.800 ; Fall       ; clk             ;
+;  outGenerico2[3]  ; clk        ; 8.561 ; 8.561 ; Fall       ; clk             ;
+;  outGenerico2[4]  ; clk        ; 5.970 ; 5.970 ; Fall       ; clk             ;
+;  outGenerico2[5]  ; clk        ; 6.206 ; 6.206 ; Fall       ; clk             ;
+;  outGenerico2[6]  ; clk        ; 5.987 ; 5.987 ; Fall       ; clk             ;
+;  outGenerico2[7]  ; clk        ; 6.003 ; 6.003 ; Fall       ; clk             ;
+;  outGenerico2[8]  ; clk        ; 5.849 ; 5.849 ; Fall       ; clk             ;
+;  outGenerico2[9]  ; clk        ; 5.984 ; 5.984 ; Fall       ; clk             ;
+;  outGenerico2[10] ; clk        ; 6.155 ; 6.155 ; Fall       ; clk             ;
+; saiClock          ; clk        ; 8.260 ; 8.260 ; Fall       ; clk             ;
++-------------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                 ;
++-------------------+------------+-------+-------+------------+-----------------+
+; Data Port         ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------------+------------+-------+-------+------------+-----------------+
+; saiClock          ; clk        ; 4.746 ; 4.746 ; Rise       ; clk             ;
+; outGenerico2[*]   ; clk        ; 3.118 ; 3.118 ; Fall       ; clk             ;
+;  outGenerico2[0]  ; clk        ; 4.468 ; 4.468 ; Fall       ; clk             ;
+;  outGenerico2[1]  ; clk        ; 4.433 ; 4.433 ; Fall       ; clk             ;
+;  outGenerico2[2]  ; clk        ; 4.631 ; 4.631 ; Fall       ; clk             ;
+;  outGenerico2[3]  ; clk        ; 4.522 ; 4.522 ; Fall       ; clk             ;
+;  outGenerico2[4]  ; clk        ; 3.177 ; 3.177 ; Fall       ; clk             ;
+;  outGenerico2[5]  ; clk        ; 3.307 ; 3.307 ; Fall       ; clk             ;
+;  outGenerico2[6]  ; clk        ; 3.189 ; 3.189 ; Fall       ; clk             ;
+;  outGenerico2[7]  ; clk        ; 3.195 ; 3.195 ; Fall       ; clk             ;
+;  outGenerico2[8]  ; clk        ; 3.118 ; 3.118 ; Fall       ; clk             ;
+;  outGenerico2[9]  ; clk        ; 3.189 ; 3.189 ; Fall       ; clk             ;
+;  outGenerico2[10] ; clk        ; 3.261 ; 3.261 ; Fall       ; clk             ;
+; saiClock          ; clk        ; 4.746 ; 4.746 ; Fall       ; clk             ;
++-------------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Progagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; reset      ; ResetOut    ; 9.313 ;    ;    ; 9.313 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------+
+; Minimum Progagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; reset      ; ResetOut    ; 5.369 ;    ;    ; 5.369 ;
++------------+-------------+-------+----+----+-------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                           ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; From Clock                    ; To Clock                      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; clk                           ; clk                           ; 3        ; 0        ; 0        ; 66       ;
+; controlador:Cont|state.inicio ; clk                           ; 1        ; 1        ; 22       ; 33       ;
+; clk                           ; controlador:Cont|state.inicio ; 0        ; 0        ; 1        ; 0        ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                            ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; From Clock                    ; To Clock                      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; clk                           ; clk                           ; 3        ; 0        ; 0        ; 66       ;
+; controlador:Cont|state.inicio ; clk                           ; 1        ; 1        ; 22       ; 33       ;
+; clk                           ; controlador:Cont|state.inicio ; 0        ; 0        ; 1        ; 0        ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 5     ; 5    ;
+; Unconstrained Output Ports      ; 13    ; 13   ;
+; Unconstrained Output Port Paths ; 13    ; 13   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Mon Dec 09 11:13:06 2019
+Info: Command: quartus_sta micro -c micro
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 1 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'micro.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name controlador:Cont|state.inicio controlador:Cont|state.inicio
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.852
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.852        -2.852 controlador:Cont|state.inicio 
+    Info (332119):    -1.135        -7.564 clk 
+Info (332146): Worst-case hold slack is -1.704
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.704       -18.842 clk 
+    Info (332119):     2.906         0.000 controlador:Cont|state.inicio 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222       -15.222 clk 
+    Info (332119):     0.500         0.000 controlador:Cont|state.inicio 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222        -1.222 controlador:Cont|state.inicio 
+    Info (332119):     0.013         0.000 clk 
+Info (332146): Worst-case hold slack is -1.014
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.014       -10.595 clk 
+    Info (332119):     1.833         0.000 controlador:Cont|state.inicio 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222       -15.222 clk 
+    Info (332119):     0.500         0.000 controlador:Cont|state.inicio 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4548 megabytes
+    Info: Processing ended: Mon Dec 09 11:13:08 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

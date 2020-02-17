@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Oct 16 14:55:30 2019
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Web Edition
+Revision Name : reg2
+Top-level Entity Name : reg2
+Family : Cyclone II
+Device : EP2C50F672C8
+Timing Models : Final
+Total logic elements : 3 / 50,528 ( < 1 % )
+    Total combinational functions : 3 / 50,528 ( < 1 % )
+    Dedicated logic registers : 2 / 50,528 ( < 1 % )
+Total registers : 2
+Total pins : 7 / 450 ( 2 % )
+Total virtual pins : 0
+Total memory bits : 0 / 594,432 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 172 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
