@@ -1,4 +1,10 @@
 # ChLeo
+## A RISC processor
 
-Este repositorio contem a descrição, em VHDL, de um processador RISC, bem como a documentação com a estrutura do DATAPATH, do CONTROLADOR e de sua ISA.
-Construído por Fabio Leoli e Fernando Chalita na disciplina de Sistemas Digitais - UFRN. 
+This repository contains the description, in VHDL, of a RISC processor, as well as the documentation with the structure of the DATAPATH, the CONTROLLER and its Instruction Set Architecture.
+
+## Datapath
+![Datapath Structure](/DataPath.png)
+
+
+Built by Fabio Leoli and Fernando Chalita in the Digital Systems course - UFRN. 
